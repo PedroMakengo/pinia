@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import Usuario from "@/components/Usuario.vue";
+import Usuario from "./Usuario.vue";
 import { computed, ref } from "vue";
 export default {
   components: {

@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import ListaUsuario from "@/components/ListaUsuario.vue";
+import ListaUsuario from "../components/ListaUsuario.vue";
 
 export default {
   name: "Home",

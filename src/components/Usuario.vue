@@ -5,8 +5,8 @@
     </div>
     <span>{{ usuario.first_name + " " + usuario.last_name }}</span>
     <a class="favorito" @click="mudarFavorito(usuario.id)">
-      <img v-if="favorito" src="@/assets/heart.svg" alt="favorito icone" />
-      <img v-else src="@/assets/heart-outline.svg" alt="favorito icone" />
+      <img v-if="favorito" src="../assets/heart.svg" alt="favorito icone" />
+      <img v-else src="../assets/heart-outline.svg" alt="favorito icone" />
     </a>
   </div>
 </template>

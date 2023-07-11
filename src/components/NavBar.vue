@@ -5,7 +5,7 @@
       <li><router-link to="/favoritos">Favoritos</router-link></li>
     </ul>
     <div class="favorito">
-      <img src="@/assets/heart.svg" alt="favoritos" />
+      <img src="../assets/heart.svg" alt="favoritos" />
       <span v-if="true">1</span>
     </div>
   </nav>
