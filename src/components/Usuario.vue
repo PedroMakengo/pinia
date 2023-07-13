@@ -3,36 +3,36 @@
     <div class="imagem-container">
       <img :src="usuario.avatar" alt="imagem avatar" />
     </div>
-    <span>{{ usuario.first_name + " " + usuario.last_name }}</span>
+    <span>{{ usuario.first_name + ' ' + usuario.last_name }}</span>
     <a class="favorito" @click="mudarFavorito(usuario.id)">
-      <img v-if="favorito" src="../assets/heart.svg" alt="favorito icone" />
+      <img v-if="isFavorito" src="../assets/heart.svg" alt="favorito icone" />
       <img v-else src="../assets/heart-outline.svg" alt="favorito icone" />
     </a>
   </div>
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref } from 'vue'
 export default {
-  props: ["usuario"],
-  emits: ["selecionado", "removeSelecionado"],
+  props: ['usuario', 'isFavorito'],
+  emits: ['selecionado', 'removeSelecionado'],
   setup(prop, { emit }) {
-    const favorito = ref(false);
+    const favorito = ref(false)
 
     function mudarFavorito(idUsuario) {
-      favorito.value = !favorito.value;
+      favorito.value = !favorito.value
 
       if (favorito.value) {
-        emit("selecionado", idUsuario);
-        return;
+        emit('selecionado', idUsuario)
+        return
       }
 
-      emit("removeSelecionado", idUsuario);
+      emit('removeSelecionado', idUsuario)
     }
 
-    return { mudarFavorito, favorito };
+    return { mudarFavorito, favorito }
   },
-};
+}
 </script>
 
 <style>
